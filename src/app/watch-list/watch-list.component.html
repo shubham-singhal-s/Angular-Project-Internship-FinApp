@@ -1,0 +1,136 @@
+<div class="grid-stack theme-black mb10" data-gs-width="12">
+  <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="6" data-gs-height="6">
+    <div class="grid-stack-item-content pd15">
+      <div class="gs-w-contener text-center">
+        <h3 class="mb20">Sector Allocation</h3>
+        <div id="chartdiv5" style="width: 100%; height: 380px;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-stack-item" data-gs-x="6" data-gs-y="0" data-gs-width="6" data-gs-height="6">
+    <div class="grid-stack-item-content pd15">
+      <div class="gs-w-contener text-center">
+        <h3 class="mb20">Company Allocation</h3>
+        <div id="chartdiv6" style="width: 100%; height: 380px;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-stack-item" data-gs-x="0" data-gs-y="7" data-gs-width="12" data-gs-height="8">
+    <div class="grid-stack-item-content pd15">
+      <div class="gs-w-contener">
+        <div style="position:relative">
+          <div class="row">
+            <div class="col-sm-6">
+
+              <input type="text" class="searchBox" placeholder="Search" (keyup)="addFilter($event.target.value)">
+
+            </div>
+            <div class="col-sm-6">
+              <ul class="pttools1">
+                <li (click)="toPDF()">
+                  <a href="#" title="Pdf">
+                    <i class="fa fa-file-pdf-o"></i>
+                  </a>
+                </li>
+                <li (click)="toExcel()">
+                  <a href="#" title="Excel" >
+                    <i class="fa fa-file-excel-o"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Import">
+                    <i class="fa fa-upload"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Add">
+                    <i class="fa fa-plus-square"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sutable"  id="equityTable">
+            <table class="ptable">
+              <thead>
+                <tr>
+                  <th rowspan=2 (click)="sortTable('companyname')">Company
+                    <i>Sector</i>
+                  </th>
+                  <th rowspan=2 class="text-right"  (click)="sortTable('Quantity')">No. Shares</th>
+                  <th rowspan=2 class="text-right" (click)="sortTable('averageprice')">Avg Price</th>
+                  <th rowspan=2 class="text-right" (click)="sortTable('averagevalue')">Total Invesment</th>
+                  <th colspan="2" class="text-center" style="border-bottom:none; border-top:none;">Current Market</th>
+                  <th rowspan=2 class="text-center" (click)="sortTable('ScripWeigthtage')">Weightage (%)</th>
+                  <th colspan="2" class="text-center" style="border-bottom:none; border-top:none;">Gain/Loss</th>
+                  <th rowspan=2 class="text-right" (click)="sortTable('total')">Total</th>
+                  <th rowspan=2></th>
+                </tr>
+                <tr>
+                  <th class="text-center" (click)="sortTable('latestprice')">Price</th>
+                  <th class="text-center" (click)="sortTable('currentvalue')">Value</th>
+                  <th class="text-center" (click)="sortTable('realised')">Realised</th>
+                  <th class="text-center" (click)="sortTable('unrealised')">Unrealised</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of message | filter:txtFilter | paginate: { itemsPerPage: 9, currentPage: p };">
+                  <td>
+                    <a href="#" class="compInfo">
+                      <em>+</em>
+                    </a>
+                    <b class="CompanyName">{{item.companyname}}
+                      <i>{{item.Sector}}</i>
+                    </b>
+                  </td>
+                  <td class="text-right">{{item.Quantity}}
+                    <i class="visible-xs hd-label">No. Shares</i>
+                  </td>
+                  <td class="text-right">{{item.averageprice}}
+                    <i class="visible-xs hd-label">Avg Price</i>
+                  </td>
+                  <td class="text-right hide_td" data-label="Total Invesment">{{item.averagevalue}}</td>
+                  <td class="text-center hide_td" data-label="Current Market Price">{{item.latestprice}}</td>
+                  <td class="text-center hide_td" data-label="Current Market Value">{{item.currentvalue}}</td>
+                  <td class="text-center hide_td" data-label="Weightage (%)">tba{{item.ScripWeigthtage}}</td>
+                  <td class="text-center hide_td" data-label="Gain/Loss Realised" [innerHTML]="item.realised | color"></td>
+                  <td class="text-center hide_td" data-label="Gain/Loss Unrealised" [innerHTML]="item.unrealised | color"></td>
+                  <td class="text-right hide_td" data-label="Total" [innerHTML]="item.total | color"></td>
+                  <td class="edittool text-right hide_td">
+                    <!-- <a href="#" class="edit_btn">
+                      <i class="fa fa-pencil"></i>
+                    </a> -->
+                    <!-- <ul class="editing_box">
+                      <li>
+                        <a href="#" title="Edit" class="editicon sprite"></a>
+                      </li>
+                      <li>
+                        <a href="#" title="watchlist" class="watchlicon sprite"></a>
+                      </li>
+                      <li>
+                        <a href="#" title="Research" class="researicon sprite"></a>
+                      </li>
+                      <li>
+                        <a href="#" title="Sell" class="sellicon sprite"></a>
+                      </li>
+                      <li>
+                        <a href="#" title="Delete" class="delicon sprite"></a>
+                      </li>
+                    </ul> -->
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+          <pagination-controls class="pageControl" (pageChange)="p = $event"></pagination-controls>
+
+      </div>
+    </div>
+  </div>
+</div>

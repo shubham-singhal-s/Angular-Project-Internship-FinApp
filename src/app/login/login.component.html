@@ -1,0 +1,77 @@
+<!-- <br><br><br><br>
+<div class="login-page">
+  <div class="form">
+  <form #userinfo="ngForm" (ngSubmit)="onLogin(userinfo.value)" class="login-form">
+
+
+    <input type="text" name="txtUser" placeholder="Username" ngModel autocorrect="off" spellcheck="false">
+    <br>
+
+    <input type="password" name="txtPass" placeholder="Password" ngModel>
+    <br>
+
+    <input type="text" name="txtComp" placeholder="Company" ngModel autocorrect="off" spellcheck="false">
+    <br>
+
+    <font color="red">{{loginService.loginStatus}}</font>
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div> -->
+<!-- 
+<div class="error-login" *ngIf="loginService.loginStatus">
+  <font color="red" [innerHTML]="loginService.loginStatus"></font>
+  <i class="fa fa-close" (click)="loginService.loginStatus=''" style="color:black; float:right; margin:3px;"></i>
+</div> -->
+<div class="login-section">
+  <div class="login-block">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="img/color_logo.png">
+      </div>
+
+      <div class="col-sm-6">
+        <ul class="login-tabs">
+          <li>
+            <a class="active">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form #userinfo="ngForm">
+      <div class="login-form clearfix" (keyup.enter)="onLogin(userinfo.value)" >
+        <div class="styled-input">
+          <input type="text" required name="txtUser" ngModel spellcheck="false" />
+          <i class="fa fa-user"> </i>
+          <label>Username / ID   <font color="red" style="margin:0 auto" [innerHTML]="loginService.loginStatus"></font></label>
+          <span></span>
+        </div>
+        <div class="styled-input">
+          <input type="password" required name="txtPass" ngModel/>
+          <i class="fa fa-unlock"> </i>
+          <label>Password</label>
+          <span></span>
+        </div>
+        <div class="styled-input">
+          <input type="text" required name="txtComp" ngModel spellcheck="false" />
+          <i class="fa fa-university"> </i>
+          <label>Company Name</label>
+          <span></span>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="btn btn-default btn-blue" (click)="onLogin(userinfo.value)">Login</a>
+        </div>
+        <div class="col-sm-6">
+          <div class="log-ft-link">
+            <a href="#">Forgot Password ?</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+	.mynet_hd h2 {font-size: 18px}
+	.mynet_table li p {font-size: 12px !important;}
+	.top-right-btn li a.avtar span {display: none !important;}
+	.hide-md {display: none !important;}
+	.top-right-btn li a.avtar i {margin-right: 0 !important}
+}
+
+@media only screen and (min-width: 240px) and (max-width: 992px) {
+	.hide-md {display: none !important;}
+	.main_wrapper {padding-left: 10px !important; padding-right: 10px;}
+	#mob_ticker {display: block !important;}
+	.side_fixednav {background: rgba(0,0,0,0.9) !important; top: 50px !important; border-radius: 0 ! important; display: none}
+
+	.navbar-nav {display: none !important; width: 100%; background-color: rgba(0,0,0,0.9); z-index: 99; position: fixed;}
+	.navbar-nav li a {text-align: left !important; padding: 17px 9px 13px 45px !important; font-size: 14px}
+	.navbar-nav > li > a > span {left: 15px !important; opacity: 1 !important; color: #4b9bfa !important}
+	.navbar-nav.nav-active {display: block !important}
+
+	.top-right-btn li a.avtar span {display: none !important;}
+	.top-right-btn li a.avtar i {margin-right: 0 !important}
+	.mynet_table {text-align: center;}
+	.mynet_table li.mynet_hd {width: 100% !important; display: block; border-right: none !important; border-left: none !important; border-bottom: 1px solid #fff}
+	.mynet_table li {width: 50% !important; min-height: 113px; float: left; vertical-align: top !important; border-bottom: 1px solid #fff; border-left: 1px solid #fff}
+	.mynet_table li:last-child {width: 100% !important; border-right: 1px solid #fff !important}
+	.mynet_table li:after {display: none !important}
+
+	.side_nav_btn {display: block;}
+	.portfolio_bx_cont {width: 211px !important}
+	.tick_body {padding: 0 !important}
+		
+}
+
+@media only screen and (min-width: 240px) and (max-width: 767px) {
+	#mob_ticker {display: none !important;}
+	.top-right-btn ul {margin-top: 6px}
+	.fxd_rgt {top: 185px !important}
+	.grid-stack > .grid-stack-item > .grid-stack-item-content {position:relative !important; top: 0; left:0px; right:0px; bottom: 0; width: auto; z-index: 0 !important; overflow-x: hidden; overflow-y: auto;}
+	.grid-stack.grid-stack-one-column-mode > .grid-stack-item {height:auto !important;}
+	.select-cont li {display: block !important;}
+	.select {display: block; width: 100%}
+	
+	.sutable table thead tr th {display: none;}
+	.sutable table tbody tr td {position: relative; /*background-color: #ececec;*/ padding-left: 45% !important; text-align: right !important; display:block; border-top: none !important}
+/*	.sutable table tbody tr td:first-child {padding-left: 10px !important; height: 50px; text-align: left !important; width: 100% !important; background-color: black; display:block !important;}*/
+	.sutable table tbody tr td:nth-child(1), .sutable table tbody tr td:nth-child(2), .sutable table tbody tr td:nth-child(3) {width: 33.33%; padding-left: 10px !important; height: 60px; text-align: left !important; ; background-color: rgba(0,0,0,0.50); display:inline-block !important;}
+	.sutable table tbody tr td:before {content: attr(data-label); position: absolute; top: 10px; left: 10px;}
+	.sutable table tbody tr td:nth-child(3):after {position: absolute; font-family: 'FontAwesome'; content: "\f067"; top: 10px; right: 10px; font-weight: normal; color: white}
+	.sutable table tbody tr td.activearw:after {content: "\f068"}
+	.ptable > tbody > tr > td b.CompanyName {float: none !important}
+	.hd-label {font-style: normal; color: rgba(255,255,255,0.5); font-size: 11px;}
+	.ptable > tbody > tr > td b.CompanyName i {padding-left: 10px}	
+	
+	.login-block {left: 0 !important; margin-left: 5% !important; margin-right: 5% !important; width: 90% !important; height: auto !important; padding: 20px !important;}
+	.login-block > .row .col-sm-6 {text-align: center !important}
+	.login-tabs {text-align: center !important; margin: 15px 0 0 !important}
+	
+	
+	}
+
+

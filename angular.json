@@ -20,12 +20,45 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/js",
+              "src/css",
+              "src/fonts",
+              "src/img"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/css/stylesheets.css",
+              "src/css/owl.carousel.min.css",
+              "src/css/owl.theme.default.min.css",
+              "src/css/font-awesome.css",
+              "src/css/mcustomscrollbar/jquery.mCustomScrollbar.css",
+              "src/css/magnific-popup.css",
+              "src/css/gridstack-extra.min.css",
+              "src/css/gridstack.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "src/js/plugins/jquery/jquery-ui.min.js",
+              "src/js/plugins/jquery/jquery-migrate.min.js",
+              "src/js/plugins/bootstrap/bootstrap.min.js",
+              "src/js/popper.min.js",
+              "src/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js",
+              "src/js/plugins.js",
+              "src/js/jquery.nice-select.min.js",
+              "src/js/owl.carousel.js",
+              "src/js/lodash.min.js",
+              "src/js/gridstack.js",
+              "src/js/gridstack.jQueryUI.js",
+              "src/js/settings.js",
+              "src/js/jquery.magnific-popup.js",
+              "src/js/amcharts/amcharts.js",
+              "src/js/amcharts/serial.js",
+              "src/js/amcharts/pie.js",
+              "src/js/amcharts/black.js",
+              "node_modules/jspdf/dist/jspdf.min.js",
+              "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js"
+            ]
           },
           "configurations": {
             "production": {
